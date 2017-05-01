@@ -4,7 +4,7 @@ var { ReducerF, AverageF, RateF } = require('../futils/composables');
 var { IP } = require('./helperpromises');
 
 const AnalyseMultipleComments = (arr) => Compose(
-  ReducerF((acc, x) => acc + (analyze(x).score / analyze(x).words.length) + 5),
+  ReducerF((acc, x) => acc + ((analyze(x).score / analyze(x).words.length) || 0) + 5),
   AverageF(arr),
   RateF,
   parseInt,
