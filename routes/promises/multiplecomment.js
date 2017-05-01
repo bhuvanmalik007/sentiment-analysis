@@ -1,4 +1,4 @@
-var analyze = require('sentiment');
+var analyze = require('sentiment-v2');
 var Compose = require('../futils/composer');
 var { ReducerF, AverageF, RateF } = require('../futils/composables');
 var { IP } = require('./helperpromises');

@@ -9,6 +9,7 @@ router.post('/single', function(req, res, next) {
 });
 
 router.post('/multiple', function(req, res, next) {
+  console.log(req.body);
   MultipleCommentPromise(req.body.comments)
   .then(x=>res.send(RequestBuilder(x)))
   .catch(x =>res.send(RequestBuilder(x.message)));
