@@ -7,7 +7,6 @@ const AnalyseMultipleComments = (arr) => Compose(
   ReducerF((acc, x) => acc + (((analyze(x).score / analyze(x).words.length) + 5)|| 0)),
   AverageF(arr),
   RateF,
-  parseInt,
   IP
 )(arr);
 
