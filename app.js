@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
+const layers = require('./routes/layers');
 
 var app = express();
 
@@ -19,6 +20,8 @@ app.use(cookieParser());
 
 //Routes
 app.use('/', index);
+app.use('/layers', layers);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
