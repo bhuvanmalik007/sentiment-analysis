@@ -102,7 +102,7 @@ const geojson2 = {
 }
 
 router.get('/:id', function(req, res, next) {
-  res.send(`${geojson+id}`);
+  res.send(geojson+`${id}`);
 });
 
 
